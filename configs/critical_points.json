@@ -1,0 +1,153 @@
+{
+  "physics": {
+    "temperature_K": 300.0,
+    "gold_density_kg_m3": 19320.0,
+    "ethanol_density_kg_m3": 785.06,
+    "gravity_m_s2": 9.81,
+    "material_set": "cylinder-reference",
+    "coating_model": "teflon-cylinder-reference"
+  },
+  "bounds_nm": {
+    "thickness": [
+      10.0,
+      200.0
+    ],
+    "size": [
+      10.0,
+      1000.0
+    ],
+    "gap": [
+      0.5,
+      100000.0
+    ]
+  },
+  "solver": {
+    "max_iterations": 18,
+    "max_evaluations": 160,
+    "max_seconds": 2400.0,
+    "force_relative_tolerance": 1e-06,
+    "gradient_scaled_tolerance": 1e-05,
+    "stationarity_tolerance_nm": 0.005,
+    "max_log_step": 0.18,
+    "jacobian_refresh_iterations": 6
+  },
+  "profiles": {
+    "plane": {
+      "fs": "psd",
+      "frequency_order": 48,
+      "epsrel": 1e-09
+    },
+    "cylinder": {
+      "zero": [
+        192,
+        192,
+        32,
+        256
+      ],
+      "nonzero": [
+        40,
+        40,
+        64,
+        256
+      ],
+      "epsrel": 1e-08
+    },
+    "sphere": {
+      "N": 56,
+      "M": 52,
+      "lmax": 900,
+      "O": 48,
+      "fs": "psd",
+      "epsrel": 1e-08,
+      "cores": 1
+    }
+  },
+  "sweep": {
+    "thicknesses_nm": [
+      10,
+      15,
+      20,
+      25,
+      30,
+      35,
+      40,
+      45,
+      50,
+      55,
+      60,
+      65,
+      70,
+      75,
+      80,
+      85,
+      90,
+      95,
+      100,
+      105,
+      110,
+      115,
+      120,
+      125,
+      130,
+      135,
+      140,
+      145,
+      150,
+      155,
+      160,
+      165,
+      170,
+      175,
+      180,
+      185,
+      190,
+      195,
+      200
+    ]
+  },
+  "seeds": {
+    "plane": [
+      {
+        "thickness_nm": 150.0,
+        "size_nm": 127.472341,
+        "gap_nm": 165.161838,
+        "branch": "upper_size"
+      }
+    ],
+    "cylinder": [
+      {
+        "thickness_nm": 90.0,
+        "size_nm": 442.099644,
+        "gap_nm": 78.274323,
+        "branch": "upper_size"
+      },
+      {
+        "thickness_nm": 150.0,
+        "size_nm": 74.105771,
+        "gap_nm": 169.085724,
+        "branch": "upper_size"
+      },
+      {
+        "thickness_nm": 150.0,
+        "size_nm": 12.1242,
+        "gap_nm": 308.606,
+        "branch": "lower_size"
+      }
+    ],
+    "sphere": [
+      {
+        "thickness_nm": 60.0,
+        "size_nm": 789.016703,
+        "gap_nm": 41.176326,
+        "branch": "upper_size"
+      },
+      {
+        "thickness_nm": 90.0,
+        "size_nm": 363.249908,
+        "gap_nm": 69.407416,
+        "branch": "upper_size"
+      }
+    ]
+  },
+  "seed_note": "Historical coordinates are initial guesses only; every reported converged row is recomputed with the selected backend."
+}

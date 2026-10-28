@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "physics": {
+    "temperature_k": 300.0,
+    "teflon_thickness_nm": 150.0,
+    "object_density_kg_m3": 19320.0,
+    "medium_density_kg_m3": 785.06,
+    "gravity_m_s2": 9.81
+  },
+  "scans": {
+    "plane": {
+      "minimum_nm": 10.0,
+      "maximum_nm": 1000.0,
+      "spacing": "log",
+      "points": 36
+    },
+    "cylinder": {
+      "minimum_nm": 10.0,
+      "maximum_nm": 1000.0,
+      "spacing": "log",
+      "points": 36
+    },
+    "sphere": {
+      "minimum_nm": 10.0,
+      "maximum_nm": 1000.0,
+      "spacing": "log",
+      "points": 36
+    }
+  },
+  "separation": {
+    "minimum_nm": 1.0,
+    "maximum_nm": 1000.0,
+    "points": 81,
+    "max_extensions": 3,
+    "extension_factor": 2.0
+  },
+  "numerics": {
+    "plane": {
+      "fs": "psd",
+      "frequency_order": null,
+      "epsrel": 1E-06,
+      "epsabs": 0.0
+    },
+    "cylinder": {
+      "backend": "exact",
+      "Nx": null,
+      "Ny": 16,
+      "nmax": null,
+      "fs": "psd",
+      "frequency_order": null,
+      "epsrel": 0.0001
+    },
+    "sphere": {
+      "n_radial": null,
+      "m_angular": null,
+      "psd_order": null,
+      "epsrel": 1E-06,
+      "lmax_factor": null,
+      "min_lmax": null,
+      "cores": 1
+    }
+  },
+  "analysis": {
+    "refine_extrema": true,
+    "max_refine_evaluations": 32,
+    "grid_convergence": false
+  }
+}
